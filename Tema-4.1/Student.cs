@@ -1,4 +1,4 @@
-﻿namespace Tema_4._1
+﻿namespace Tema_4._1_Ex2
 {
     class Student
     {
@@ -8,7 +8,7 @@
 
         internal string FullDescription
         {
-            get { return $" Student name: {Name}, faculty: {Faculty}, year: {Year}."; }
+            get { return $" Student name: {Name}, Faculty: {Faculty}, Year: {Year}."; }
         }
         public void Print()
         {

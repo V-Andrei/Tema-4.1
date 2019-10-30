@@ -2,7 +2,7 @@
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tema_4._1
+namespace Tema_4._1_Ex2
 {
     class Program
     {

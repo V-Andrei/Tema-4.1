@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Tema_4._1
+namespace Tema_4._1_Ex2
 {
     class Course
     {
@@ -32,8 +32,8 @@ namespace Tema_4._1
             foreach (Student a in l1)
             {
                 System.Console.Write("Student name: " + a.Name);
-                System.Console.Write(" faculty: " + a.Faculty);
-                System.Console.Write(" year: "+ a.Year + "\n");
+                System.Console.Write(" Faculty: " + a.Faculty);
+                System.Console.Write(" Year: "+ a.Year + "\n");
             }
         }
     }

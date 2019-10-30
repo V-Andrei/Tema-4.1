@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Tema_4._1
+namespace Tema_4._1_Ex2
 {
     class Professor
     {
@@ -10,7 +10,7 @@ namespace Tema_4._1
 
         internal string FullDescription
         {
-            get { return $"Professor name: {Name}, faculty: {Faculty}, specialization: {Specialization}."; }
+            get { return $"Professor name: {Name}, Faculty: {Faculty}, Specialization: {Specialization}."; }
         }
         public void Print()
         {
