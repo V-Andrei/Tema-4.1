@@ -7,33 +7,26 @@ namespace Tema_4._1_Ex2
         public string Name { get; set; }
         public Professor Professor { get; set; }
         public int Year { get; set; }
-        public List<Student> Students { get; set; }
-
-
-        internal string FullDescription
-        {
-            get { return $"Course name: {Name}, Course year: {Year}"; }
-        }
-        
+           
         private static List<Student> StudentList()
         {
-            List<Student> l1 = new List<Student>();
-            l1.Add(new Student { Name = "Maria", Faculty = "History", Year = 2 });
-            l1.Add(new Student { Name = "Vasile", Faculty = "History", Year = 3 });
-            return l1;
+            List<Student> listStud1 = new List<Student>();
+            listStud1.Add(new Student { Name = "Maria", Faculty = "History", Year = 2 });
+            listStud1.Add(new Student { Name = "Vasile", Faculty = "History", Year = 3 });
+            return listStud1;
         }
 
         public void Print()
         {
-            List<Student> l1 = StudentList();
+            List<Student> listStud1 = StudentList();
 
-            System.Console.WriteLine(FullDescription);
+            System.Console.WriteLine($"Course name: {Name}, Course year: {Year}");
             Professor.Print();
-            foreach (Student a in l1)
+            foreach (Student s in listStud1)
             {
-                System.Console.Write("Student name: " + a.Name);
-                System.Console.Write(" Faculty: " + a.Faculty);
-                System.Console.Write(" Year: "+ a.Year + "\n");
+                System.Console.Write("Student name: " + s.Name);
+                System.Console.Write(" Faculty: " + s.Faculty);
+                System.Console.Write(" Year: "+ s.Year + "\n");
             }
         }
     }
