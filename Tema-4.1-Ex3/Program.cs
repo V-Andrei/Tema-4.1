@@ -8,19 +8,16 @@ namespace Tema_4._1_Ex3
     {
         static void Main(string[] args)
         {
+
             Hotel h1 = new Hotel
             {
                 Name = "Traian",
                 City = "Iasi",
-                Stars = 4
-            };
-
-            Rate R1 = new Rate
-            {
-                Amount = 199
-            };
-
+                Stars = 4,
+                               
+            };           
             h1.Print();
+
             System.Console.ReadLine();
 
         }
