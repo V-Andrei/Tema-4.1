@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +9,21 @@ namespace Tema_4._1_Ex4
     {
         static void Main(string[] args)
         {
+
         }
     }
-    class PizzaTopping
+    public enum PizzaToppingName
     {
-        public string Name 
-        { 
-            get; set; 
-        }
+        Cheese, Meat, Vegetable
+    }
+    public enum PizzaBaseName
+    {
+        Regular, Thick, Italian
+    }
+    class Pizza
+    {
+        public PizzaBase pizzaBase { get; set; }
+        public List<PizzaTopping> pizzaToppings { get; set; }
 
     }
 }
