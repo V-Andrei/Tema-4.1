@@ -9,21 +9,21 @@ namespace Tema_4._1_Ex4
     {
         static void Main(string[] args)
         {
+            PizzaTopping topping = new PizzaTopping();
 
+            topping.Print();
+
+            PizzaBase pizzaBase = new PizzaBase();
+            pizzaBase.Name = BaseNames.Italian;
+
+            Pizza pizza = new Pizza(pizzaBase, "Pizza mea");
+            pizza.AddTopping(topping);
+            pizza.AddTopping(topping);
+
+            pizzaBase.Print();
+
+
+            System.Console.ReadLine();
         }
-    }
-    public enum PizzaToppingName
-    {
-        Cheese, Meat, Vegetable
-    }
-    public enum PizzaBaseName
-    {
-        Regular, Thick, Italian
-    }
-    class Pizza
-    {
-        public PizzaBase pizzaBase { get; set; }
-        public List<PizzaTopping> pizzaToppings { get; set; }
-
     }
 }

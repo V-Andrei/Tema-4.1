@@ -1,13 +1,27 @@
 ﻿namespace Tema_4._1_Ex4
 {
-    class PizzaBase
+    public class PizzaBase
     {
-        public PizzaBaseName Name { get; set; }
-        public int Cost { get; set; }
+        public BaseNames Name { get; set;}
+
+        private decimal _baseCost = 8m;
+        public decimal Cost 
+        { 
+            get
+            {
+                if (Name == BaseNames.Italian)
+                {
+                    return 1.5m * _baseCost;
+                }
+
+                return _baseCost;
+            }
+        }
+
 
         public void Print()
         {
-            System.Console.WriteLine($"Pizza base name: {Name}and cost: {Cost}");
+            System.Console.WriteLine($"Base:[{Name}] ($[{Cost}])");
         }
 
     }

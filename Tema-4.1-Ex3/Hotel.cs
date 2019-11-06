@@ -28,7 +28,7 @@ namespace Tema_4._1_Ex3
                 System.Console.WriteLine("Number adults: " + r.Adults);
                 System.Console.WriteLine("Number children: " + r.Children);
                 System.Console.WriteLine("Room amount: "  + r.DailyRate.Amount + r.DailyRate.Currency);
-                //r.GetPriceForDays(); 
+                r.GetPriceForDays(); 
             }
         }
     }

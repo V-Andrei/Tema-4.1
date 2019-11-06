@@ -2,15 +2,56 @@
 
 namespace Tema_4._1_Ex4
 {
-    class PizzaTopping
+    public class PizzaTopping
     {
-        public PizzaToppingName Name { get; set; }
-        public int Cost;
+        private ToppingsNames _name;
+        public ToppingsNames Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {   
+                if(value == ToppingsNames.Cheese || value == ToppingsNames.Vegetable || value== ToppingsNames.Meat)
+                {
+                    _name = value;
+                }
+                else
+                {
+                    Console.WriteLine("Please enter a correct value.");
+                }
+                
+            }
+        }
+
+        public decimal Cost 
+        {
+            get
+            {
+                switch (Name)
+                {
+                    case ToppingsNames.Cheese:
+                        return 12;
+                    case ToppingsNames.Meat:
+                        return 20;
+                    default:
+                        return 10;
+                }
+            }
+        }
 
         public void Print ()
         {
-            Console.WriteLine($"Pizza topping name: {Name} and cost {Cost}");
+            string toppingName = this.Name.ToString();
+            if (Name == ToppingsNames.Meat)
+            {
+                Console.WriteLine($"{this.Name.ToString().ToUpper()} (${this.Cost})");
+            }
+            else
+            {
+                Console.WriteLine($"{this.Name} (${this.Cost})");
+            }           
         }
-
     }
 }
